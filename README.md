@@ -17,15 +17,15 @@ static void ICACHE_FLASH_ATTR update_leds(void)
 ```
 
 ## Notes
-Note that the color sequence is Green-Red-Blue (GRB) and not the traditional Red-Green-Blue (RGB)
+* The color sequence is Green-Red-Blue (GRB) and not the traditional Red-Green-Blue (RGB)
+* See AdaFruit's extensive [NeoPixel Überguide](https://learn.adafruit.com/adafruit-neopixel-uberguide/overview)
 
 ## Credits
 The `ws2812_write()` routine is copied from @kbeckmann's [NodeMCU repository](https://github.com/kbeckmann/nodemcu-firmware). For more information see the related post [Bit-banging two pins simultaneously on ESP8266](https://kbeckmann.github.io/2015/07/25/Bit-banging-two-pins-simultaneously-on-ESP8266/)
 
 The `Makefile` is copied from [Tuan PM's MQTT repository](https://github.com/tuanpmt/esp_mqtt). I flattened the directory structure and made some minor changes to the Makefile.
 
-## References
-See also 
+## References 
 * @adafruit's [Neopixel Library](https://github.com/adafruit/Adafruit_NeoPixel/blob/master/esp8266.c): Handles the ESP8266 and the ESP32
 * @cnlohr's [original ws2812 project](https://github.com/cnlohr/ws2812esp8266)
 * @cnlohr's [I2C approach to driving ws2812](https://github.com/cnlohr/esp8266ws2812i2s): Reduces the CPU load by offloading the waveform creation to the I2C core
@@ -48,7 +48,7 @@ For pin 2, for example, these lines are necessary:
 ```
 
 ## Routines (for copy-and-paste)
-If you just want to get started and are not interested in the comments, then you can copy and paste these two routines:
+If you just want to get started and are not interested in the comments, then you can copy and paste these two routines. See `user_main.c` to read the comments for these routines.
 
 ```c
 static inline uint32_t _getCycleCount(void)
